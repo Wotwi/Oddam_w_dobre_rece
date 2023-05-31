@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function Home() {
     return (
         <div className="container">
@@ -21,8 +23,8 @@ function Home() {
                         <h3 className="home__header">Oddaj niechciane rzeczy w zaufane ręce</h3>
                         <img src="src/assets/Decoration.svg" className="home__header-decoration"/>
                         <div className="home__btn-wrapper">
-                            <p className="home__btn home__btn-1">ODDAJ RZECZY</p>
-                            <p className="home__btn home__btn-2">ZORGANIZUJ ZBIÓRKĘ</p>
+                            <Link to="/login" className="home__btn">ODDAJ RZECZY</Link>
+                            <Link to="/login" className="home__btn">ZORGANIZUJ ZBIÓRKĘ</Link>
                         </div>
                     </section>
                 </div>
