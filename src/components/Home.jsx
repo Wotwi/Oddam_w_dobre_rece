@@ -1,4 +1,6 @@
 import {Link} from "react-router-dom";
+import ThreeColumns from "./ThreeColumns.jsx";
+import React from "react";
 
 function Home() {
     return (
@@ -29,6 +31,7 @@ function Home() {
                     </section>
                 </div>
             </div>
+            <ThreeColumns />
         </div>
     );
 }
