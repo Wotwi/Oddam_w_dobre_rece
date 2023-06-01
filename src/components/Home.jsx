@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import ThreeColumns from "./ThreeColumns.jsx";
 import React from "react";
+import FourSteps from "./FourSteps.jsx";
 
 function Home() {
     return (
@@ -32,6 +33,7 @@ function Home() {
                 </div>
             </div>
             <ThreeColumns />
+            <FourSteps />
         </div>
     );
 }
