@@ -1,0 +1,96 @@
+.home {
+  height: 100rem;
+  background-image: url(src/assets/Home-Hero-Image.jpg);
+  background-repeat: no-repeat;
+  background-position: -90%;
+  font-family: $font-alt;
+}
+
+// NAVIGATION
+
+.home__nav {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 3.7rem;
+
+  .home__nav-top {
+
+    .home__account {
+      display: inline-block;
+      color: $header-light-color;
+      text-decoration: none;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.4rem;
+      margin-right: 2.8rem;
+
+      &:nth-child(2) {
+        border: 0.075rem solid #FAD648;
+        padding-inline: 1rem;
+      }
+    }
+  }
+  .home__nav-bottom {
+
+    .home__nav-item {
+      display: inline-block;
+      color: $header-dark-color;
+      text-decoration: none;
+      padding-inline: 1.3rem;
+      margin-inline: 1.4rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// CONTENT
+
+.home__wrapper {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: flex-end;
+
+  .home__content {
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home__header {
+      font-size: 3.8rem;
+      font-family: $font-alt;
+      color: $header-dark-color;
+      text-align: center;
+
+      &:nth-child(2) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .home__header-decoration {
+      width: 30%;
+      margin-bottom: 6.5rem;
+    }
+
+    .home__btn-wrapper {
+      display: flex;
+      justify-content: space-around;
+
+      .home__btn {
+        font-size: 3.6rem;
+        font-family: $font-alt;
+        font-weight: 300;
+        color: $header-dark-color;
+        border: .075rem solid $header-dark-color;
+        width: 40%;
+        padding: 1rem;
+        padding-inline: 7rem;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+}

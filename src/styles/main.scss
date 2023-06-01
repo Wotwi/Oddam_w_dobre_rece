@@ -1,5 +1,10 @@
 // common
 
 @import "./common/reset";
+@import "./common/container";
 @import "./common/fonts";
 @import "./common/colors";
+
+// layout
+
+@import "./layouts/home";
