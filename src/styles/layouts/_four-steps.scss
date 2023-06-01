@@ -1,0 +1,72 @@
+.four-steps__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+
+  .four-steps__header {
+    font-size: 3.8rem;
+    font-family: $font-alt;
+    color: $header-dark-color;
+  }
+  .four-steps__decoration {
+    margin: 2rem 0 4.5rem 0;
+  }
+  .four-steps__steps {
+    display: flex;
+    justify-content: center;
+    background-color: #F0F1F1;
+    padding-bottom: 1rem;
+    width: 100%;
+
+    .four-steps__single__step {
+      padding: 8rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .four-steps__icon {
+
+      }
+      .four-steps__title {
+        font-family: $font-alt;
+        font-size: 1.8rem;
+        color: $header-dark-color;
+        margin-top: 1rem;
+        width: 15rem;
+        text-align: center;
+
+        &:after {
+          content: '';
+          display: block;
+          border-bottom: .1rem solid #707070;
+          margin: 1rem 0;
+          width: 7rem;
+          margin-inline: auto;
+        }
+      }
+      .four-steps__description {
+        font-family: $font-alt;
+        font-size: 1.6rem;
+        color: $header-dark-color;
+        text-align: center;
+        width: 15rem;
+      }
+    }
+  }
+
+  .four-steps__btn {
+    font-size: 3.6rem;
+    font-family: $font-alt;
+    font-weight: 300;
+    color: $header-dark-color;
+    border: .075rem solid $header-dark-color;
+    width: 31rem;
+    padding: 1rem;
+    padding-inline: 7rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 3.5rem;
+  }
+}
