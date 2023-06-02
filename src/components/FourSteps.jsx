@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 function FourSteps() {
     return (
@@ -28,7 +29,7 @@ function FourSteps() {
                         <p className="four-steps__description">kurier przyjedzie w dogodnym terminie</p>
                     </div>
                 </div>
-                <a href="" className="four-steps__btn">ODDAJ RZECZY</a>
+                <Link to="/login" className="four-steps__btn">ODDAJ RZECZY</Link>
             </div>
         </div>
     );
