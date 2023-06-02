@@ -1,0 +1,40 @@
+.about__wrapper {
+  display: flex;
+  background-color: #F0F1F1;
+
+  .about__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 17rem 0;
+
+    .about__text-header {
+      font-family: $font-alt;
+      font-size: 3.8rem;
+      color: $header-dark-color;
+      margin-bottom: 4rem;
+    }
+    .about__text-decoration {
+      margin-bottom: 6rem;
+    }
+    .about__text-content {
+      font-family: $font-alt;
+      font-size: 3rem;
+      color: $header-dark-color;
+      line-height: 5.4rem;
+      width: 70%;
+      text-align: center;
+    }
+    .about__text-signature {
+      align-self: flex-end;
+      margin-top: 4rem;
+      margin-right: 15rem;
+    }
+  }
+  .about__img {
+    background-image: url(src/assets/People.jpg);
+    width: 50%;
+  }
+}
