@@ -5,7 +5,7 @@ function Register() {
         <div className="container">
             <nav className="home__nav">
                     <span className="home__nav-top">
-                        <a href="" className="home__account">Załóż konto</a>
+                        <a href="" className="home__account">Zaloguj</a>
                         <a href="" className="home__account">Załóż konto</a>
                     </span>
                 <span className="home__nav-bottom">
