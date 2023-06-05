@@ -30,10 +30,12 @@
     .login__input {
       width: 25rem;
       border: none;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid $header-dark-color;
       margin-bottom: 3rem;
       background-color: #F0F1F1;
       padding: 1rem;
+      font-size: 1.6rem;
+      color: $header-dark-color;
 
       &:focus {
         outline: none;
@@ -50,7 +52,7 @@
       background-color: #fff;
       border: none;
       padding: 1.3rem;
-      margin-right: 15rem;
+      margin-inline: 15rem;
     }
     .login__login-btn {
       font-family: $font-alt;
@@ -59,7 +61,7 @@
       border: 0.75px solid $header-dark-color;
       background-color: #fff;
       padding: 1.3rem;
-      margin-left: 15rem;
+      margin-inline: 15rem;
     }
   }
 }
