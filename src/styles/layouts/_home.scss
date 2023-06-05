@@ -3,7 +3,6 @@
   background-image: url(src/assets/Home-Hero-Image.jpg);
   background-repeat: no-repeat;
   background-position: -90%;
-  font-family: $font-alt;
 }
 
 // NAVIGATION
@@ -13,6 +12,7 @@
   align-items: flex-end;
   flex-direction: column;
   padding: 3.7rem;
+  font-family: $font-alt;
 
   .home__nav-top {
 
