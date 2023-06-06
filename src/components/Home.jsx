@@ -33,7 +33,7 @@ function Home() {
                             ) : (
                                 <>
                                     <p className="home__user__email">Cześć {user.email}!</p>
-                                    <a href="" className="home__account">Oddaj rzeczy</a>
+                                    <Link to={'/oddaj'} className="home__account">Oddaj rzeczy</Link>
                                     <p onClick={logout} className="home__logout">Wyloguj</p>
                                 </>
                             )}
