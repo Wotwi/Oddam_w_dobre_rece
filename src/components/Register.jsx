@@ -1,15 +1,46 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {createUserWithEmailAndPassword, onAuthStateChanged, signOut} from 'firebase/auth';
+import {auth} from '../firebase-config';
+import {Link, useNavigate} from "react-router-dom";
 
 function Register() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [user, setUser] = useState({})
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+    }, []);
+
+    const navigate = useNavigate();
+
+    const handleInput = async (e) => {
+        e.preventDefault()
+        try {
+            const user = await createUserWithEmailAndPassword(auth, email, password)
+        } catch (error) {
+            console.log(error.message);
+        }
+        navigate('/');
+    };
+
+    const toLoginPage = () => {
+        navigate('/login');
+    }
+
     return (
         <div className="container">
             <nav className="home__nav">
                     <span className="home__nav-top">
-                        <a href="" className="home__account">Zaloguj</a>
-                        <a href="" className="home__account">Załóż konto</a>
+                        <Link to={'/login'} className="home__account">Zaloguj</Link>
+                        <Link to={'/register'} className="home__account">Załóż konto</Link>
                     </span>
                 <span className="home__nav-bottom">
-                        <a href="" className="home__nav-item">Start</a>
+                        <Link to={'/'} className="home__nav-item">Start</Link>
                         <a href="" className="home__nav-item">O co chodzi?</a>
                         <a href="" className="home__nav-item">O nas</a>
                         <a href="" className="home__nav-item">Fundacja i organizacje</a>
@@ -17,20 +48,35 @@ function Register() {
                     </span>
             </nav>
             <section className="login__wrapper">
-                <h1 className="login__header">Zaloguj się</h1>
+                <h1 className="login__header">Załóż konto</h1>
                 <img src="src/assets/Decoration.svg" alt="" className="login__decoration"/>
-                <form action="" className="login__form">
+
+                <form onSubmit={handleInput} action="" className="login__form">
                     <label htmlFor="login__email" className="login__label">Email</label>
-                    <input type="email" id="login__email" className="login__input"/>
+                    <input
+                        type="email"
+                        id="login__email"
+                        className="login__input"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                     <label htmlFor="login__password" className="login__label">Hasło</label>
-                    <input type="password" id="login__password" className="login__input"/>
-                    <label htmlFor="login__password" className="login__label">Powtórz hasło</label>
-                    <input type="password" id="login__password" className="login__input"/>
-                </form>
-                <span className="login__buttons">
-                        <button className="login__login-btn">Zaloguj się</button>
-                        <button className="login__register-btn">Załóż konto</button>
+                    <input
+                        type="password"
+                        id="login__password"
+                        className="login__input"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <label htmlFor="login__password-repeated" className="login__label">Powtórz hasło</label>
+                    <input
+                        type="password"
+                        id="login__password-repeated"
+                        className="login__input"
+                    />
+                    <span className="register__buttons">
+                        <button onClick={toLoginPage} className="register__left-btn">Zaloguj się</button>
+                        <button type="submit" className="register__right-btn">Załóż konto</button>
                     </span>
+                </form>
             </section>
         </div>
     );

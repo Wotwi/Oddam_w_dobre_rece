@@ -19,6 +19,7 @@
     margin-top: 6rem;
     background-color: #F0F1F1;
     padding: 4rem 9rem 1rem 9rem;
+    position: relative;
 
     .login__label {
       font-size: 1.6rem;
@@ -43,9 +44,17 @@
     }
   }
   .login__buttons {
+    display: flex;
     padding: 4rem;
+    position: absolute;
+    bottom: 45rem;
+    left: 80rem;
 
-    .login__register-btn {
+    &:nth-child(2) {
+      border: 0.75px solid $header-dark-color;
+    }
+
+    .login__left-btn {
       font-family: $font-alt;
       font-weight: 300;
       font-size: 1.8rem;
@@ -53,15 +62,53 @@
       border: none;
       padding: 1.3rem;
       margin-inline: 15rem;
+      width: 12rem;
+      height: 5rem;
     }
-    .login__login-btn {
+    .login__right-btn {
       font-family: $font-alt;
       font-weight: 300;
       font-size: 1.8rem;
-      border: 0.75px solid $header-dark-color;
       background-color: #fff;
+      border: 0.75px solid $header-dark-color;
       padding: 1.3rem;
       margin-inline: 15rem;
+      width: 12.2rem;
+      height: 5rem;
+    }
+  }
+  .register__buttons {
+    display: flex;
+    padding: 4rem;
+    position: absolute;
+    top: 35rem;
+    left: -25rem;
+
+    &:nth-child(2) {
+      border: 0.75px solid $header-dark-color;
+    }
+
+    .register__left-btn {
+      font-family: $font-alt;
+      font-weight: 300;
+      font-size: 1.8rem;
+      background-color: #fff;
+      border: none;
+      padding: 1.3rem;
+      margin-inline: 15rem;
+      width: 12rem;
+      height: 5rem;
+    }
+    .register__right-btn {
+      font-family: $font-alt;
+      font-weight: 300;
+      font-size: 1.8rem;
+      background-color: #fff;
+      border: 0.75px solid $header-dark-color;
+      padding: 1.3rem;
+      margin-inline: 15rem;
+      width: 12.2rem;
+      height: 5rem;
     }
   }
 }

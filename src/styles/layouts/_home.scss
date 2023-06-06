@@ -30,6 +30,22 @@
         padding-inline: 1rem;
       }
     }
+
+    .home__user__email {
+      font-size: 1.4rem;
+      font-family: $font-alt;
+      display: inline-block;
+      margin-right: 2rem;
+    }
+
+    .home__logout {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-family: $font-alt;
+      color: $header-dark-color;
+      margin-right: 3rem;
+      cursor: pointer;
+    }
   }
   .home__nav-bottom {
 
