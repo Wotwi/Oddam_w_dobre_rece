@@ -1,0 +1,123 @@
+.help__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  width: 100%;
+
+  .help__header {
+    font-size: 3.8rem;
+    color: $header-dark-color;
+    font-family: $font-alt;
+    padding: 2rem;
+  }
+  .help__decoration {
+
+  }
+
+  .help__subjects {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+
+    .help__subject {
+      font-family: $font-alt;
+      font-size: 2.4rem;
+      color: $header-dark-color;
+      text-decoration: none;
+      width: 20rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      &:focus {
+        border: .1rem solid $header-dark-color;
+      }
+    }
+  }
+
+  .help__subjects-list {
+    width: 80%;
+    min-height: 8rem;;
+    max-height: 24.3rem;
+    margin-top: 10rem;
+  }
+}
+
+.help__foundation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.help__organization {
+
+}
+.help__collection {
+
+}
+
+.help__subject-desc {
+  font-size: 2.2rem;
+  font-family: $font-alt;
+  color: $header-dark-color;
+  line-height: 3rem;
+  width: 45%;
+  text-align: center;
+  margin-bottom: 6.6rem;
+}
+
+.help__subject-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+  border-bottom: .1rem solid #707070;
+  margin: 1rem 0;
+
+  .help__subject-header {
+    font-size: 2.6rem;
+    font-family: $font-base;
+    font-weight: 300;
+    color: $header-dark-color;
+  }
+  .help__subject-subtext {
+    font-size: 1.8rem;
+    font-family: $font-base;
+    font-weight: 300;
+    font-style: italic;
+    color: $header-dark-color;
+  }
+  .help__subject-alt {
+    font-size: 1.8rem;
+    font-family: $font-base;
+    font-weight: 300;
+    color: $header-dark-color;
+  }
+}
+
+.pages {
+  display: flex;
+
+  .page__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 5rem;
+    font-family: $font-alt;
+    color: $header-dark-color;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 1rem;
+
+    &:focus {
+      border: .1rem solid #707070;
+    }
+  }
+}
+

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+import {onAuthStateChanged} from "firebase/auth";
+import {auth} from "../firebase-config.js";
 
 function FourSteps() {
+
+    const [user, setUser] = useState({})
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+    }, []);
+
     return (
         <div className="container">
             <div className="four-steps__wrapper">
@@ -29,7 +40,15 @@ function FourSteps() {
                         <p className="four-steps__description">kurier przyjedzie w dogodnym terminie</p>
                     </div>
                 </div>
-                <Link to="/login" className="four-steps__btn">ODDAJ RZECZY</Link>
+                {!user ? (
+                    <>
+                        <Link to="/login" className="four-steps__btn">ODDAJ RZECZY</Link>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/oddaj" className="four-steps__btn">ODDAJ RZECZY</Link>
+                    </>
+                )}
             </div>
         </div>
     );
