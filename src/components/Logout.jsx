@@ -20,7 +20,7 @@ function Logout() {
             <section className="logout__wrapper">
                 <h1 className="logout__header">Wylogowanie nastąpiło pomyślnie!</h1>
                 <img src="src/assets/Decoration.svg" alt="" className="logout__decoration"/>
-                <Link className="logout__button">Strona główna</Link>
+                <Link to={"/"} className="logout__button">Strona główna</Link>
             </section>
         </div>
     );
