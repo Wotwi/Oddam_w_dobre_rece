@@ -35,7 +35,7 @@ function Home() {
                                 <>
                                     <p className="home__user__email">Cześć {user.email}!</p>
                                     <Link to={'/oddaj'} className="home__account">Oddaj rzeczy</Link>
-                                    <p onClick={logout} className="home__logout">Wyloguj</p>
+                                    <Link to={'/logout'}><p onClick={logout} className="home__logout">Wyloguj</p></Link>
                                 </>
                             )}
                     </span>

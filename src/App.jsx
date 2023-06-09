@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./components/Login.jsx";
 import ThreeColumns from "./components/ThreeColumns.jsx";
 import Register from "./components/Register.jsx";
+import Logout from "./components/Logout.jsx";
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
         {
             path: "/register",
             element: <Register />
+        },
+        {
+            path: "/logout",
+            element: <Logout />
         }
     ])
 
