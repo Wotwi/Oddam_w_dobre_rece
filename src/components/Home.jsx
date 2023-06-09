@@ -5,6 +5,7 @@ import FourSteps from "./FourSteps.jsx";
 import AboutUs from "./AboutUs.jsx";
 import {onAuthStateChanged, signOut} from "firebase/auth";
 import {auth} from "../firebase-config.js";
+import WeHelp from "./WeHelp.jsx";
 
 function Home() {
 
@@ -70,6 +71,7 @@ function Home() {
             <ThreeColumns />
             <FourSteps />
             <AboutUs />
+            <WeHelp />
         </div>
     );
 }
