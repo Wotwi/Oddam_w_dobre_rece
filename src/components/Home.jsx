@@ -6,6 +6,7 @@ import AboutUs from "./AboutUs.jsx";
 import {onAuthStateChanged, signOut} from "firebase/auth";
 import {auth} from "../firebase-config.js";
 import WeHelp from "./WeHelp.jsx";
+import Contact from "./Contact.jsx";
 
 function Home() {
 
@@ -72,6 +73,7 @@ function Home() {
             <FourSteps />
             <AboutUs />
             <WeHelp />
+            <Contact />
         </div>
     );
 }

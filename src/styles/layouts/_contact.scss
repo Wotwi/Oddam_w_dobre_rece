@@ -1,0 +1,120 @@
+.contact__wrapper {
+  width: 100%;
+  margin-top: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  height: 100rem;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: url("src/assets/Background-Contact-Form.jpg");
+    display: block;
+    position: absolute;
+    opacity: .2;
+  }
+
+  .contact__content {
+    width: 40%;
+    margin-top: 20rem;
+
+    .contact__header {
+      font-family: $font-alt;
+      font-size: 3.8rem;
+      text-align: center;
+      color: $header-dark-color;
+      margin-bottom: 2.5rem;
+      margin-left: 10rem;
+    }
+    .contact__decoration {
+      margin-left: 10rem;
+    }
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+    }
+    .contact__form__name {
+      border: none;
+      border-bottom: 1px solid $header-dark-color;
+      margin-bottom: 3rem;
+      width: 150%;
+      font-family: $font-alt;
+      color: $header-dark-color;
+      font-size: 1.6rem;
+      opacity: .5;
+    }
+    .contact__form__email {
+      border: none;
+      border-bottom: 1px solid $header-dark-color;
+      margin-bottom: 3rem;
+      width: 150%;
+      font-family: $font-alt;
+      color: $header-dark-color;
+      font-size: 1.6rem;
+      opacity: .5;
+    }
+    .contact__form__message {
+      width: 85%;
+      margin-left: 11rem;
+      font-family: $font-alt;
+      color: $header-dark-color;
+      font-size: 1.6rem;
+      opacity: .5;
+      border: none;
+      border-bottom: 1px solid $header-dark-color;
+      margin-bottom: 3rem;
+    }
+    .contact__form__button {
+      width: 15rem;
+      height: 5rem;
+      font-family: $font-alt;
+      font-weight: 300;
+      font-size: 1.8rem;
+      background-color: #fff;
+      border: .075rem solid $header-dark-color;
+      position: absolute;
+      bottom: 50rem;
+      right: 0;
+    }
+  }
+}
+
+.input__wrapper {
+  display: flex;
+}
+
+.both__inputs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7rem;
+  margin-left: 1.5rem;
+
+
+  .input__label-wrapper {
+    position: relative;
+    font-family: $font-alt;
+    font-weight: 600;
+    color: $header-dark-color;
+    font-size: 1.6rem;
+
+
+    .contact__form__label {
+      position: absolute;
+      top: -3rem;
+    }
+  }
+}
+
+.contact__form__label-message {
+  font-family: $font-alt;
+  font-weight: 600;
+  color: $header-dark-color;
+  font-size: 1.6rem;
+  align-self: flex-start;
+  margin-left: 11rem;
+  margin-bottom: 2rem;
+}
