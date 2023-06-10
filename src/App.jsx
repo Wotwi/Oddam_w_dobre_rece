@@ -5,6 +5,7 @@ import Login from "./components/Login.jsx";
 import ThreeColumns from "./components/ThreeColumns.jsx";
 import Register from "./components/Register.jsx";
 import Logout from "./components/Logout.jsx";
+import OddajRzeczy from "./components/OddajRzeczy.jsx";
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
         {
             path: "/logout",
             element: <Logout />
+        },
+        {
+            path: "/oddaj-rzeczy",
+            element: <OddajRzeczy />
         }
     ])
 

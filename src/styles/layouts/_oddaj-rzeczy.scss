@@ -1,0 +1,64 @@
+.home-oddaj {
+  height: 100rem;
+  background-image: url(src/assets/Form-Hero-Image.jpg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+
+.oddaj__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 90rem;
+  margin-top: 18rem;
+
+  .oddaj__header {
+    font-family: $font-alt;
+    font-size: 3.8rem;
+    color: $header-dark-color;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    width: 70%;
+  }
+
+  .oddaj__squares__wrapper {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .oddaj__span {
+      position: relative;
+      padding: 2rem;
+      margin-inline: 2.5rem;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 15.5rem;
+        height: 15.5rem;
+        border: 1px solid black;
+        position: absolute;
+        top: 0;
+        left: -1.5rem;
+        rotate: 45deg;
+      }
+
+      .oddaj__number {
+        font-family: $font-alt;
+        font-weight: 300;
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .oddaj__square-text {
+        font-family: $font-alt;
+        font-weight: 300;
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+

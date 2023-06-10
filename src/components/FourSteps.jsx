@@ -46,7 +46,7 @@ function FourSteps() {
                     </>
                 ) : (
                     <>
-                        <Link to="/oddaj" className="four-steps__btn">ODDAJ RZECZY</Link>
+                        <Link to="/oddaj-rzeczy" className="four-steps__btn">ODDAJ RZECZY</Link>
                     </>
                 )}
             </div>

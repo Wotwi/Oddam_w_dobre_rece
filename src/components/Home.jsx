@@ -61,7 +61,7 @@ function Home() {
                                 </>
                             ) : (
                                 <>
-                                    <Link to="/oddaj" className="home__btn">ODDAJ RZECZY</Link>
+                                    <Link to="/oddaj-rzeczy" className="home__btn">ODDAJ RZECZY</Link>
                                     <Link to="/zorganizuj" className="home__btn">ZORGANIZUJ ZBIÓRKĘ</Link>
                                 </>
                             )}
