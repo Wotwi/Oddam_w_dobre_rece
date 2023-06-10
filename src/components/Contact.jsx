@@ -24,6 +24,14 @@ function Contact() {
                     </form>
                 </div>
             </div>
+            <footer className="footer">
+                <span></span>
+                <h6 className="footer__header">Copyright by Coders Lab</h6>
+                <span className="footer__icons">
+                    <img className="footer__icon" src="src/assets/Facebook.svg" alt=""/>
+                    <img className="footer__icon" src="src/assets/Instagram.svg" alt=""/>
+                </span>
+            </footer>
         </div>
     );
 }

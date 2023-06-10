@@ -77,7 +77,7 @@
       background-color: #fff;
       border: .075rem solid $header-dark-color;
       position: absolute;
-      bottom: 50rem;
+      bottom: 30rem;
       right: 0;
     }
   }
@@ -117,4 +117,23 @@
   align-self: flex-start;
   margin-left: 11rem;
   margin-bottom: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  .footer__header {
+    font-size: 1.8rem;
+    color: $header-dark-color;
+    font-family: $font-alt;
+    margin-left: 5rem;
+  }
+  .footer__icons {
+
+    .footer__icon {
+      margin-inline: 1rem;
+
+    }
+  }
 }
