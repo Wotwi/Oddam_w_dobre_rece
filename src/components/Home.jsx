@@ -41,11 +41,11 @@ function Home() {
                             )}
                     </span>
                     <span className="home__nav-bottom">
-                        <Link to={'/'} className="home__nav-item">Start</Link>
-                        <a href="" className="home__nav-item">O co chodzi?</a>
-                        <a href="" className="home__nav-item">O nas</a>
-                        <a href="" className="home__nav-item">Fundacja i organizacje</a>
-                        <a href="" className="home__nav-item">Kontakt</a>
+                        <a href="/" className="home__nav-item">Start</a>
+                        <a href="#4steps" className="home__nav-item">O co chodzi?</a>
+                        <a href="#about-us" className="home__nav-item">O nas</a>
+                        <a href="#contractors" className="home__nav-item">Fundacja i organizacje</a>
+                        <a href="#contact" className="home__nav-item">Kontakt</a>
                     </span>
                 </nav>
                 <div className="home__wrapper">
@@ -70,10 +70,18 @@ function Home() {
                 </div>
             </div>
             <ThreeColumns />
-            <FourSteps />
-            <AboutUs />
-            <WeHelp />
-            <Contact />
+            <section id="4steps">
+                <FourSteps />
+            </section>
+            <section id="about-us">
+                <AboutUs />
+            </section>
+            <section id="contractors">
+                <WeHelp />
+            </section>
+            <section id="contact">
+                <Contact />
+            </section>
         </div>
     );
 }

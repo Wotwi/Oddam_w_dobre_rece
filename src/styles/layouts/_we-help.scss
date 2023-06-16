@@ -33,9 +33,9 @@
       align-items: center;
       padding: 1rem;
 
-      &:focus {
-        border: .1rem solid $header-dark-color;
-      }
+      //&:focus {
+      //  border: .1rem solid $header-dark-color;
+      //}
     }
   }
 
@@ -52,12 +52,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-.help__organization {
-
-}
-.help__collection {
-
 }
 
 .help__subject-desc {
@@ -121,3 +115,7 @@
   }
 }
 
+.active {
+  border: .1rem solid $header-dark-color;
+  font-size: 20rem;
+}
