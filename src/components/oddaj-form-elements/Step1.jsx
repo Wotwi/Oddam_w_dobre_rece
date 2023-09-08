@@ -25,16 +25,84 @@ function Step1() {
     }
 
     // ================================================================
-    const [optionClicked, setOptionClicked] = useState(false);
+    const [optionClicked1, setOptionClicked1] = useState(false);
+    const [optionClicked2, setOptionClicked2] = useState(false);
+    const [optionClicked3, setOptionClicked3] = useState(false);
+    const [optionClicked4, setOptionClicked4] = useState(false);
+    const [optionClicked5, setOptionClicked5] = useState(false);
+
+    const [bgColor1, setBgColor1] = useState('');
+    const [bgColor2, setBgColor2] = useState('');
+    const [bgColor3, setBgColor3] = useState('');
+    const [bgColor4, setBgColor4] = useState('');
+    const [bgColor5, setBgColor5] = useState('');
 
     const handleClicked1 = () => {
-        setOptionClicked(!optionClicked);
+        setOptionClicked1(!optionClicked1);
+        setBgColor1("#FAD648");
+        console.log('1')
     };
-    const divStyles = {
-      backgroundColor: optionClicked ? '' : '#FAD648'
+    const handleClicked2 = () => {
+        setOptionClicked2(!optionClicked2);
+        setBgColor2("#FAD648");
+        console.log('2')
     };
-    //
+    const handleClicked3 = () => {
+        setOptionClicked3(!optionClicked3);
+        setBgColor3("#FAD648");
+        console.log('3')
+    };
+    const handleClicked4 = () => {
+        setOptionClicked4(!optionClicked4);
+        setBgColor4("#FAD648");
+        console.log('4')
+    };
+    const handleClicked5 = () => {
+        setOptionClicked5(!optionClicked5);
+        setBgColor5("#FAD648");
+        console.log('5')
+    };
 
+    // =================================================================
+    const [optionalText, setOptionalText] = useState('');
+
+    const handleOptionalText = (e) => {
+        setOptionalText(e.target.value);
+    }
+
+    // Step 4:
+    const [streetValue, setStreetValue] = useState('');
+    const [cityValue, setCityValue] = useState('');
+    const [postValue, setPostValue] = useState('');
+    const [phoneValue, setPhoneValue] = useState('');
+
+    const [dateValue, setDateValue] = useState('');
+    const [hourValue, setHourValue] = useState('');
+    const [messageValue, setMessageValue] = useState('');
+
+    const handleStreet = (e) => {
+        setStreetValue(e.target.value);
+    }
+
+    const handleCity = (e) => {
+        setCityValue(e.target.value);
+    }
+
+    const handlePost = (e) => {
+        setPostValue(e.target.value);
+    }
+    const handlePhone = (e) => {
+        setPhoneValue(e.target.value);
+    }
+    const handleDate = (e) => {
+        setDateValue(e.target.value);
+    }
+    const handleHour = (e) => {
+        setHourValue(e.target.value);
+    }
+    const handleMessage = (e) => {
+        setMessageValue(e.target.value);
+    }
 
     const [selectedOption, setSelectedOption] = useState('Step1');
     const toggleOption = (option) => {
@@ -190,16 +258,16 @@ function Step1() {
                             <span className="oddaj-form__choice">
                                 <h3 className="oddaj-form__choice__header">Komu chcesz pomóc?</h3>
                                 <span className="oddaj-form__elements__wrapper">
-                                    <div style={divStyles} onClick={handleClicked1} className="oddaj-form__choice__element">dzieciom</div>
-                                    <div style={divStyles} /*onClick={handleClicked}*/ className="oddaj-form__choice__element">samotnym matkom</div>
-                                    <div style={divStyles} /*onClick={handleClicked}*/ className="oddaj-form__choice__element">bezdomnym</div>
-                                    <div style={divStyles} /*onClick={handleClicked}*/ className="oddaj-form__choice__element">niepełnosprawnym</div>
-                                    <div style={divStyles} /*onClick={handleClicked}*/ className="oddaj-form__choice__element">osobom starszym</div>
+                                    <div style={{background: bgColor1}} onClick={handleClicked1} className="oddaj-form__choice__element">dzieciom</div>
+                                    <div style={{background: bgColor2}} onClick={handleClicked2} className="oddaj-form__choice__element">samotnym matkom</div>
+                                    <div style={{background: bgColor3}} onClick={handleClicked3} className="oddaj-form__choice__element">bezdomnym</div>
+                                    <div style={{background: bgColor4}} onClick={handleClicked4} className="oddaj-form__choice__element">niepełnosprawnym</div>
+                                    <div style={{background: bgColor5}} onClick={handleClicked5} className="oddaj-form__choice__element">osobom starszym</div>
                                 </span>
                             </span>
                             <span className="oddaj-form__organization">
                                 <label className="oddaj-form__organization__header" id="organization-input" htmlFor="">Wpisz nazwę konkretnej organizacji (opcjonalnie)</label>
-                                <input className="oddaj-form__organization__input" id="organization-input" type="text"/>
+                                <input value={optionalText} onChange={handleOptionalText} className="oddaj-form__organization__input" id="organization-input" type="text"/>
                             </span>
 
                             <span className="oddaj-form__button__wrapper">
@@ -233,19 +301,19 @@ function Step1() {
 
                             <span className="span-position">
                                 <label htmlFor="street" className="step-4__label">Ulica</label>
-                                <input type="text" id="street" className="step-4__input"/>
+                                <input value={streetValue} onChange={handleStreet} type="text" id="street" className="step-4__input"/>
                             </span>
                             <span className="span-position">
                                 <label htmlFor="city" className="step-4__label">Miasto</label>
-                                <input type="text" id="city" className="step-4__input"/>
+                                <input value={cityValue} onChange={handleCity} type="text" id="city" className="step-4__input"/>
                             </span>
                             <span className="span-position">
                                 <label htmlFor="post" className="step-4__label">Kod <br /> pocztowy</label>
-                                <input type="text" id="post" className="step-4__input"/>
+                                <input value={postValue} onChange={handlePost} type="text" id="post" className="step-4__input"/>
                             </span>
                             <span className="span-position">
                                 <label htmlFor="phone" className="step-4__label">Numer <br /> telefonu</label>
-                                <input type="text" id="phone" className="step-4__input"/>
+                                <input value={phoneValue} onChange={handlePhone} type="tel" id="phone" className="step-4__input"/>
                             </span>
 
                         </span>
@@ -254,15 +322,15 @@ function Step1() {
 
                             <span className="span-position">
                                 <label htmlFor="date" className="step-4__label">Data</label>
-                                <input type="text" id="date" className="step-4__input"/>
+                                <input value={dateValue} onChange={handleDate} type="text" id="date" className="step-4__input"/>
                             </span>
                             <span className="span-position">
                                 <label htmlFor="hour" className="step-4__label">Godzina</label>
-                                <input type="text" id="hour" className="step-4__input"/>
+                                <input value={hourValue} onChange={handleHour} type="text" id="hour" className="step-4__input"/>
                             </span>
                             <span className="span-position">
                                 <label htmlFor="date" className="step-4__label">Uwagi <br /> dla kuriera</label>
-                                <textarea id="date" className="step-4__input textarea" cols="30" rows="10"></textarea>
+                                <textarea value={messageValue} onChange={handleMessage} id="date" className="step-4__input textarea" cols="30" rows="10"></textarea>
                             </span>
                         </span>
 
@@ -296,51 +364,61 @@ function Step1() {
                     <span className="summary__wrapper">
                         <h5 className="summary__subheader">Adres odbioru:</h5>
 
-                        <span className="span-position">
+                        <span className="span-position-summary">
                             <p className="summary__txt">Ulica</p>
-                            <p className="summary__txt"></p>
+                            <p className="summary__txt">{streetValue}</p>
                         </span>
-                        <span className="span-position">
+                        <span className="span-position-summary">
                             <p className="summary__txt">Miasto</p>
-                            <p className="summary__txt"></p>
+                            <p className="summary__txt">{cityValue}</p>
                         </span>
-                        <span className="span-position">
-                            <p className="summary__txt">Kod <br /> Pocztowy</p>
-                            <p className="summary__txt"></p>
+                        <span className="span-position-summary">
+                            <p className="summary__txt">Kod Pocztowy</p>
+                            <p className="summary__txt">{postValue}</p>
                         </span>
-                        <span className="span-position">
-                            <p className="summary__txt">Numer <br /> telefonu</p>
-                            <p className="summary__txt"></p>
+                        <span className="span-position-summary">
+                            <p className="summary__txt">Numer telefonu</p>
+                            <p className="summary__txt">{phoneValue}</p>
                         </span>
                     </span>
 
                     <span className="summary__wrapper">
                         <h5 className="summary__subheader">Termin odbioru:</h5>
 
-                        <span className="span-position">
+                        <span className="span-position-summary">
                             <p className="summary__txt">Data</p>
-                            <p className="summary__txt"></p>
+                            <p className="summary__txt">{dateValue}</p>
                         </span>
-                        <span className="span-position">
+                        <span className="span-position-summary">
                             <p className="summary__txt">Godzina</p>
-                            <p className="summary__txt"></p>
+                            <p className="summary__txt">{hourValue}</p>
                         </span>
-                        <span className="span-position">
-                            <p className="summary__txt">Uwagi <br /> dla kuriera</p>
-                            <p className="summary__txt"></p>
+                        <span className="span-position-summary">
+                            <p className="summary__txt">Uwagi dla kuriera</p>
+                            <p className="summary__txt">{messageValue}</p>
                         </span>
 
                     </span>
 
                     <span className="summary__button__wrapper">
                         <Link onClick={() => toggleOption('Step4')}><button className="summary__button summary__button-back">Wstecz</button></Link>
-                        <Link onClick={() => toggleOption('Summary')}><button className="summary__button summary__button-confirm">Potwierdzam</button></Link>
+                        <Link onClick={() => toggleOption('End')}><button className="summary__button summary__button-confirm">Potwierdzam</button></Link>
                     </span>
                 </span>
 
 
             </div>
 
+
+            </div>}
+            {selectedOption === 'End' && <div className="container">
+
+                <div className="oddaj-form__background end__wrapper">
+                    <span className="end__content">
+                        <h3 className="end__header">Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie informacje o odbiorze.</h3>
+                        <img src="src/assets/Decoration.svg" className="end__decoration"></img>
+                    </span>
+                </div>
 
             </div>}
         </>

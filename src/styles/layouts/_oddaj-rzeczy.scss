@@ -328,7 +328,6 @@
       background-color: #EEECE8;
       border: .075rem solid $header-dark-color;
       padding: 1rem;
-      margin-bottom: -2.5rem;
     }
   }
 }
@@ -458,8 +457,18 @@
 
   .summary__wrapper {
 
-    .span-position {
+    .span-position-summary {
+      display: flex;
+      justify-content: space-around;
 
+      .summary__txt {
+        margin-top: 2rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 11rem;
+      }
     }
 
     .summary__txt {
@@ -494,6 +503,29 @@
     .summary__button-confirm {
       width: 24.4rem;
       height: 8rem;
+    }
+  }
+}
+
+.end__wrapper {
+  display: flex;
+  margin-top: -5rem;
+
+  .end__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 29rem;
+
+    .end__header {
+      font-family: $font-alt;
+      font-weight: 300;
+      font-size: 4rem;
+      line-height: 5.5rem;
+      color: $header-dark-color;
+      text-align: center;
+      width: 67rem;
     }
   }
 }
